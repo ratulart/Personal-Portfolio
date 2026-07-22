@@ -266,17 +266,7 @@ body::before {
 
 /* Spotlight portrait */
 .spotlight-mask {
-    -webkit-mask-image: radial-gradient(
-        70% 60% at 55% 45%,
-        rgba(0, 0, 0, 1) 55%,
-        rgba(0, 0, 0, 0) 100%
-    );
-    mask-image: radial-gradient(
-        70% 60% at 55% 45%,
-        rgba(0, 0, 0, 1) 55%,
-        rgba(0, 0, 0, 0) 100%
-    );
-    filter: grayscale(15%) contrast(1.05) brightness(0.9);
+    filter: contrast(1.02) saturate(1.05);
 }
 
 .divider {

@@ -140,15 +140,16 @@ export default function Hero() {
             transition={{ delay: 0.6, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             className="relative aspect-[4/5] w-full max-w-md ml-auto rounded-2xl overflow-hidden border border-white/[0.08]"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/25 via-transparent to-[#8B5CF6]/25" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/15 via-transparent to-[#8B5CF6]/15 mix-blend-overlay pointer-events-none" />
             <img
               src={PROFILE.portraitUrl}
-              alt="Professional silhouette portrait"
+              alt="Ratul Biswas — Digital Marketing Professional"
               className="absolute inset-0 w-full h-full object-cover spotlight-mask"
+              style={{ objectPosition: "center 20%" }}
               loading="eager"
               data-testid="hero-portrait"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/10 to-transparent pointer-events-none" />
 
             {/* Corner labels */}
             <div className="absolute top-4 left-4 label text-white/70">

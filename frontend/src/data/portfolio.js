@@ -10,7 +10,7 @@ export const PROFILE = {
   linkedin: "https://www.linkedin.com/in/ratulbiswas-seo-specialist",
   resumeUrl: "/resume.pdf",
   portraitUrl:
-    "https://images.pexels.com/photos/27499405/pexels-photo-27499405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=700",
+    "https://customer-assets-jt897jd0.emergentagent.net/job_ratul-portfolio-1/artifacts/hfvnlao0_WhatsApp%20Image%202026-07-22%20at%209.47.03%20PM.jpeg",
   officeUrl:
     "https://images.unsplash.com/photo-1710956394109-aaa3710e3a63?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBsdXh1cnklMjBvZmZpY2UlMjBkYXJrfGVufDB8fHx8MTc4NDczNjA3OXww&ixlib=rb-4.1.0&q=85&w=1600",
   dataUrl:
