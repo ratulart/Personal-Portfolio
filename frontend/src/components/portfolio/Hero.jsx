@@ -141,6 +141,17 @@ export default function Hero() {
           style={{ scale }}
           className="lg:col-span-5 relative"
         >
+          {/* Ambient glow halo behind the portrait */}
+          <div
+            aria-hidden
+            className="absolute inset-0 -z-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(60% 60% at 50% 45%, rgba(59,130,246,0.35), rgba(139,92,246,0.18) 45%, transparent 75%)",
+              filter: "blur(60px)",
+              transform: "scale(1.05)",
+            }}
+          />
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -148,10 +159,11 @@ export default function Hero() {
             className="relative aspect-[4/5] w-full max-w-md ml-auto"
             style={{
               WebkitMaskImage:
-                "radial-gradient(ellipse 88% 88% at 50% 45%, #000 55%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.4) 88%, transparent 100%)",
+                "radial-gradient(ellipse 82% 82% at 50% 45%, #000 30%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.2) 90%, transparent 100%)",
               maskImage:
-                "radial-gradient(ellipse 88% 88% at 50% 45%, #000 55%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.4) 88%, transparent 100%)",
-              filter: "drop-shadow(0 40px 60px rgba(59,130,246,0.18)) drop-shadow(0 20px 40px rgba(139,92,246,0.12))",
+                "radial-gradient(ellipse 82% 82% at 50% 45%, #000 30%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.2) 90%, transparent 100%)",
+              filter:
+                "drop-shadow(0 30px 60px rgba(59,130,246,0.35)) drop-shadow(0 10px 30px rgba(139,92,246,0.25)) drop-shadow(0 0 40px rgba(6,182,212,0.15))",
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/10 via-transparent to-[#8B5CF6]/10 mix-blend-overlay pointer-events-none" />
