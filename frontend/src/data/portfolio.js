@@ -3,7 +3,7 @@ export const PROFILE = {
   name: "Ratul Biswas",
   initials: "RB",
   role: "Digital Marketing Professional",
-  subrole: "SEO Specialist · Growth-Focused Marketer",
+  subrole: "SEO · Meta & Google Ads Specialist · Growth-Focused Marketer",
   location: "India",
   phone: "+91 9002301748",
   email: "mr.ratulwork@gmail.com",

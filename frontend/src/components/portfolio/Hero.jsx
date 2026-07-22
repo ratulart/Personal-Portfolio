@@ -5,7 +5,8 @@ import { PROFILE } from "../../data/portfolio";
 
 const line1 = "Digital Marketing".split(" ");
 const line2 = "Professional.".split(" ");
-const line3 = ["SEO", "Specialist."];
+const line3a = "SEO, Meta &";
+const line3b = "Google Ads Specialist.";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -52,22 +53,27 @@ export default function Hero() {
             <span className="label">Portfolio · 2026</span>
           </motion.div>
 
-          <h1 className="font-display text-[13vw] sm:text-[9vw] lg:text-[7.2vw] leading-[0.95] tracking-tighter">
-            <div className="reveal-line block">
+          <h1 className="font-display text-[11vw] sm:text-[8vw] lg:text-[5vw] xl:text-[4.6vw] leading-[0.98] tracking-tighter">
+            <div className="reveal-line block whitespace-nowrap">
               <span style={{ animationDelay: "0.15s" }}>
                 {line1.join(" ")}
               </span>
             </div>
-            <div className="reveal-line block">
+            <div className="reveal-line block whitespace-nowrap">
               <span style={{ animationDelay: "0.3s" }}>
                 <span className="font-serif-i text-[#CBD5E1]">
                   {line2.join(" ")}
                 </span>
               </span>
             </div>
-            <div className="reveal-line block">
+            <div className="reveal-line block whitespace-nowrap">
               <span style={{ animationDelay: "0.45s" }} className="grad-text">
-                {line3.join(" ")}
+                {line3a}
+              </span>
+            </div>
+            <div className="reveal-line block whitespace-nowrap">
+              <span style={{ animationDelay: "0.6s" }} className="grad-text">
+                {line3b}
               </span>
             </div>
           </h1>
@@ -93,10 +99,11 @@ export default function Hero() {
           >
             <a
               href={PROFILE.resumeUrl}
+              download="Ratul-Biswas-Resume.pdf"
               className="btn-primary"
               data-testid="hero-resume-button"
             >
-              <Download size={16} /> Download Résumé
+              <Download size={16} /> Download Resume
             </a>
             <a
               href="#contact"
@@ -145,7 +152,7 @@ export default function Hero() {
               src={PROFILE.portraitUrl}
               alt="Ratul Biswas — Digital Marketing Professional"
               className="absolute inset-0 w-full h-full object-cover spotlight-mask"
-              style={{ objectPosition: "center 20%" }}
+              style={{ objectPosition: "68% 18%", transform: "scale(1.12)", transformOrigin: "70% 40%" }}
               loading="eager"
               data-testid="hero-portrait"
             />

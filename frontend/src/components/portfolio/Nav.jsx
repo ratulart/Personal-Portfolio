@@ -66,10 +66,11 @@ export default function Nav() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href={PROFILE.resumeUrl}
+            download="Ratul-Biswas-Resume.pdf"
             className="btn-primary text-xs"
             data-testid="nav-resume-button"
           >
-            Résumé
+            Resume
           </a>
         </div>
 
@@ -105,10 +106,11 @@ export default function Nav() {
               ))}
               <a
                 href={PROFILE.resumeUrl}
+                download="Ratul-Biswas-Resume.pdf"
                 className="btn-primary self-start mt-2"
                 data-testid="mnav-resume-button"
               >
-                Résumé
+                Resume
               </a>
             </div>
           </motion.div>
