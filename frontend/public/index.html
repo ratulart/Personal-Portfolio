@@ -3,41 +3,59 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
+        <meta name="theme-color" content="#0F172A" />
+        <meta name="description" content="Ratul Biswas — Digital Marketing Professional & SEO Specialist. Growth-focused marketer building brands with SEO, performance marketing, content strategy, analytics, and AI-assisted workflows." />
+        <meta name="keywords" content="Ratul Biswas, SEO Specialist, Digital Marketing Executive, Performance Marketing, Growth Marketing, Content Marketing, SEO Portfolio, Digital Marketing Portfolio, SM Solutions" />
+        <meta name="author" content="Ratul Biswas" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ratulbiswas.example.com/" />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Ratul Biswas — Digital Marketing Professional & SEO Specialist" />
+        <meta property="og:description" content="Growth-focused digital marketer specialising in SEO, performance marketing, analytics and AI-powered strategy." />
+        <meta property="og:url" content="https://ratulbiswas.example.com/" />
+        <meta property="og:image" content="https://images.pexels.com/photos/27499405/pexels-photo-27499405.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ratul Biswas — Digital Marketing Professional" />
+        <meta name="twitter:description" content="SEO Specialist & Digital Marketing Executive — portfolio, case studies, certifications, and contact." />
+        <meta name="twitter:image" content="https://images.pexels.com/photos/27499405/pexels-photo-27499405.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
-        <!--
-        manifest.json provides metadata used when your web app is installed on a
-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-        -->
-        <!--
-        Notice the use of %PUBLIC_URL% in the tags above.
-        It will be replaced with the URL of the `public` folder during the build.
-        Only files inside the `public` folder can be referenced from the HTML.
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet" />
 
-        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-        work correctly both with client-side routing and a non-root public URL.
-        Learn how to configure a non-root public URL by running `npm run build`.
-        -->
-        <title>Emergent | Fullstack App</title>
+        <!-- Schema.org Person JSON-LD -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Ratul Biswas",
+          "jobTitle": "Digital Marketing Executive & SEO Specialist",
+          "worksFor": { "@type": "Organization", "name": "SM Solutions" },
+          "email": "mailto:mr.ratulwork@gmail.com",
+          "telephone": "+91-9002301748",
+          "url": "https://ratulbiswas.example.com/",
+          "sameAs": [
+            "https://www.linkedin.com/in/ratulbiswas-seo-specialist"
+          ],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Brainware University"
+          },
+          "knowsAbout": ["SEO", "Digital Marketing", "Google Ads", "Meta Ads", "GA4", "Content Strategy", "Performance Marketing"]
+        }
+        </script>
+
+        <title>Ratul Biswas — Digital Marketing Professional & SEO Specialist</title>
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
         <script>
             !(function (t, e) {
                 var o, n, p, r;
@@ -102,7 +120,7 @@
             })(document, window.posthog || []);
             posthog.init("phc_DbsPb39SRc8z3EiQ6Dhj6ikv4H4rTKcht9d4sZSesceP", {
                 api_host: "https://ap.emergent.sh",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
+                person_profiles: "identified_only",
                 session_recording: {
                     recordCrossOriginIframes: true,
                     capturePerformance: false,
