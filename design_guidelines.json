@@ -1,0 +1,113 @@
+{
+  "theme": "dark",
+  "typography": {
+    "primary_heading": {
+      "font_family": "Plus Jakarta Sans, sans-serif",
+      "weight": "800",
+      "tracking": "tracking-tighter",
+      "usage": "Hero headers, major section titles. Max text-6xl on desktop. Keep it geometric, tight, and massive."
+    },
+    "secondary_heading": {
+      "font_family": "Playfair Display, serif",
+      "weight": "400",
+      "style": "italic",
+      "usage": "Used for editorial contrast (e.g., 'Digital Marketing', manifesto chapters, elegant blockquotes). Creates tension against the brutalist geometric sans."
+    },
+    "body": {
+      "font_family": "Inter, sans-serif",
+      "weight": "400",
+      "leading": "leading-relaxed",
+      "usage": "All standard paragraphs, card descriptions, and timeline content. Highly legible."
+    },
+    "labels": {
+      "font_family": "Inter, sans-serif",
+      "weight": "600",
+      "tracking": "tracking-[0.2em]",
+      "transform": "uppercase",
+      "size": "text-xs",
+      "usage": "Overlines, tags, category labels on Skills/Certifications."
+    },
+    "font_imports": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');"
+  },
+  "colors": {
+    "primary_background": "#0F172A",
+    "secondary_background": "#1E293B",
+    "surface": "#273449",
+    "surface_hover": "#334155",
+    "accent_primary": "#3B82F6",
+    "accent_secondary": "#06B6D4",
+    "accent_highlight": "#8B5CF6",
+    "text_primary": "#F8FAFC",
+    "text_secondary": "#CBD5E1",
+    "text_muted": "#94A3B8",
+    "border": "rgba(255,255,255,0.08)",
+    "status": {
+      "success": "#22C55E",
+      "warning": "#F59E0B",
+      "error": "#EF4444"
+    },
+    "usage_rules": "Never use pure black or white. Limit gradients to small, deliberate moments (e.g., a text-clip gradient on a specific keyword or a subtle glowing border on a highlighted card). Backgrounds should remain solid dark navy (#0F172A) to let the typography and imagery do the heavy lifting."
+  },
+  "visual_enhancers": {
+    "borders": "1px solid rgba(255,255,255,0.08) for all cards and section dividers. It creates a technical, 'architectural' feel.",
+    "shadows": "Ambient glows rather than drop shadows. E.g., hover states can trigger a faint inset glow using the highlight accent: shadow-[inset_0_0_20px_rgba(139,92,246,0.1)].",
+    "glassmorphism": "Used ONLY for the sticky header navigation: backdrop-blur-xl bg-[#0F172A]/70 with a 1px bottom border. Do not use fully transparent headers.",
+    "textures": "Apply a faint, fixed SVG noise overlay (opacity 2-3%) across the entire site to remove the 'digital flatness' and make it feel like premium print."
+  },
+  "component_rules": {
+    "buttons": "Pill-shaped (rounded-full). Primary buttons use #F8FAFC (white) background with #0F172A text for extreme contrast. Hover state: scale down slightly (scale-95) with Framer Motion, transition to #CBD5E1. Secondary buttons: transparent with 1px border, text #F8FAFC.",
+    "cards": "Flat surfaces (#273449), sharp or max 8px border-radius (rounded-lg). Strict padding (p-8). Transition background to #334155 on hover. No muddy drop shadows.",
+    "marquee": "Use react-fast-marquee. Slow, organic drift. Font: Playfair Display, italic, text-5xl, text_muted (#94A3B8). Add wide spacing between items.",
+    "toast": "Use Sonner. Dark mode variant, solid #273449 background, border rgba(255,255,255,0.08)."
+  },
+  "grids_and_layouts": {
+    "hero": "Asymmetrical layout. Massive typography on the left. Right side features a spotlight-clipped portrait or 3D data visualization.",
+    "about_manifesto": "Numbered chapters using a two-column grid. Left column: massive Serif number (e.g., '01'). Right column: body text.",
+    "skills_bento": "Tetris-style Bento Grid (grid-cols-1 md:grid-cols-4). Mix col-span-2 and col-span-1 cards. Some tall (row-span-2). Generous gap (gap-6).",
+    "experience_timeline": "Vertical line indicator (border-l) on the left. Generous spacing (py-12) between each role. Use typography to establish hierarchy between Job Title and Company.",
+    "contact": "Two column setup. Left: Giant text 'Let's Build Something'. Right: minimalist mailto form using Shadcn inputs (heavily customized to match the dark surface theme).",
+    "spacing_system": "Extreme generous spacing. Sections separated by py-32 or py-40. Internal card padding p-8. Tension through negative space."
+  },
+  "motion_and_interactions": {
+    "hero_reveal": "Kinetic line-by-line reveal using framer-motion. Wrap lines in overflow-hidden spans, translate y from 100% to 0% with cubic-bezier(0.76, 0, 0.24, 1) over 1s.",
+    "scroll_animations": "Use framer-motion `whileInView`. Elements should drift upward (y: 30 to 0) and fade in (opacity 0 to 1). Do not over-animate; stagger children for lists (skills, timeline).",
+    "smooth_scroll": "Lenis is MANDATORY. Configuration: { lerp: 0.07, smoothWheel: true }. It creates the heavy, premium momentum scroll expected of an Awwwards site.",
+    "hover_states": "Cards slightly lift (-translate-y-1) and change surface color. Images inside cards (if any) zoom slightly (scale-105) while container remains overflow-hidden."
+  },
+  "accessibility": {
+    "contrast": "Ensure #94A3B8 (muted text) against #0F172A meets APCA standards. If not, lighten it to #CBD5E1 for critical readability.",
+    "focus_states": "focus:ring-2 focus:ring-[#3B82F6] focus:ring-offset-2 focus:ring-offset-[#0F172A] on all interactive elements.",
+    "test_ids": "Mandatory data-testid attributes (e.g., data-testid='hero-resume-button', data-testid='contact-submit-button', data-testid='skill-card-seo')."
+  },
+  "media": {
+    "image_urls": {
+      "hero_portrait": {
+        "url": "https://images.pexels.com/photos/27499405/pexels-photo-27499405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Dramatic, shadowed portrait for the hero section to maintain a premium corporate silhouette vibe."
+      },
+      "abstract_data": {
+        "url": "https://images.pexels.com/photos/8640331/pexels-photo-8640331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Glowing neon blue optical fibers. Use inside a bento card (e.g., Academic Project or Data Skills) as an image mask or background."
+      },
+      "office_vibe": {
+        "url": "https://images.unsplash.com/photo-1710956394109-aaa3710e3a63?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBsdXh1cnklMjBvZmZpY2UlMjBkYXJrfGVufDB8fHx8MTc4NDczNjA3OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Dark luxury modern office. Use as a heavily darkened parallax background in the 'Why Hire Me' or Contact section."
+      }
+    },
+    "treatment": "Images must never feel like standard stock. Apply a grayscale filter and tint them blue/navy using CSS blend modes (mix-blend-luminosity or overlay with #0F172A), OR clip them aggressively into sharp geometric shapes (e.g., strict rectangular masks). Keep max height 80vh on mobile."
+  },
+  "3d_libraries": {
+    "hero_moment": "Use tsparticles (react-tsparticles). Configuration: slow-moving, sparse network of glowing dots/lines (using the cyan #06B6D4 and violet #8B5CF6 accents). It should sit entirely BEHIND the typography and have a dark vignette over it so it doesn't distract. It represents 'digital networking' and 'SEO data points'.",
+    "alternative": "If TSParticles is too heavy, build a CSS/SVG only subtle animated grid background with glowing radial gradients tracing the lines."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "No generic centered layouts. Asymmetry creates tension, and tension is interesting.",
+    "Do not use `transition: all`. Target specific properties like `transition-colors`, `transition-transform`.",
+    "Inject a subtle SVG noise filter fixed to the background globally to give it a matte, premium texture.",
+    "Strictly follow the color hex codes provided. Do not invent new shades outside the provided palette.",
+    "For the 'Contact' form, strictly use `mailto:` protocol on submit. No backend API calls.",
+    "Embed a 'Resume' button in the hero linking to '/resume.pdf' (can just be a dead link for now, but design the UI beautifully).",
+    "Ensure the header navigation ALWAYS has a solid or highly-blurred background; never let it disappear into the page content.",
+    "Every interactive element MUST have a `data-testid`."
+  ]
+}
