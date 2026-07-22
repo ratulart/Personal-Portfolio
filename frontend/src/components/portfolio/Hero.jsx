@@ -145,50 +145,46 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative aspect-[4/5] w-full max-w-md ml-auto rounded-2xl overflow-hidden border border-white/[0.08]"
+            className="relative aspect-[4/5] w-full max-w-md ml-auto"
+            style={{
+              WebkitMaskImage:
+                "radial-gradient(ellipse 88% 88% at 50% 45%, #000 55%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.4) 88%, transparent 100%)",
+              maskImage:
+                "radial-gradient(ellipse 88% 88% at 50% 45%, #000 55%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.4) 88%, transparent 100%)",
+              filter: "drop-shadow(0 40px 60px rgba(59,130,246,0.18)) drop-shadow(0 20px 40px rgba(139,92,246,0.12))",
+            }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/15 via-transparent to-[#8B5CF6]/15 mix-blend-overlay pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/10 via-transparent to-[#8B5CF6]/10 mix-blend-overlay pointer-events-none" />
             <img
               src={PROFILE.portraitUrl}
               alt="Ratul Biswas — Digital Marketing Professional"
               className="absolute inset-0 w-full h-full object-cover spotlight-mask"
-              style={{ objectPosition: "68% 18%", transform: "scale(1.12)", transformOrigin: "70% 40%" }}
+              style={{ objectPosition: "center 22%" }}
               loading="eager"
               data-testid="hero-portrait"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/10 to-transparent pointer-events-none" />
-
-            {/* Corner labels */}
-            <div className="absolute top-4 left-4 label text-white/70">
-              ⌗ 001 / Portfolio
-            </div>
-            <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-              <div>
-                <div className="label text-white/60">Currently</div>
-                <div className="text-sm text-white mt-1">
-                  Digital Marketing Executive · SM Solutions
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="label text-white/60">Based</div>
-                <div className="text-sm text-white mt-1">India</div>
-              </div>
-            </div>
           </motion.div>
 
-          {/* Floating chip */}
+          {/* Info chip below picture */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.7 }}
-            className="hidden md:flex absolute -left-6 top-8 pcard px-4 py-3 items-center gap-3"
+            className="mt-6 mx-auto max-w-md flex items-center justify-between gap-4 pcard px-5 py-4"
+            data-testid="hero-edu-chip"
           >
-            <span className="w-8 h-8 rounded-full bg-[#06B6D4]/20 grid place-items-center text-[#06B6D4] text-xs font-semibold">
-              9.75
-            </span>
-            <div className="text-xs">
-              <div className="text-white">BBA · Digital Marketing</div>
-              <div className="text-[#94A3B8]">Brainware University</div>
+            <div className="flex items-center gap-3">
+              <span className="w-10 h-10 rounded-full bg-[#06B6D4]/15 border border-[#06B6D4]/30 grid place-items-center text-[#06B6D4] text-sm font-semibold">
+                9.75
+              </span>
+              <div className="text-xs">
+                <div className="text-white text-sm">BBA · Digital Marketing</div>
+                <div className="text-[#94A3B8]">Brainware University</div>
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="label text-white/60">Currently</div>
+              <div className="text-xs text-white mt-1">SM Solutions</div>
             </div>
           </motion.div>
         </motion.div>
